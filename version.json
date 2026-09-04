@@ -3,5 +3,7 @@
   "minor": 0,
   "patch": 0,
   "update_count": 1,
-  "pre_release": ""
+  "pre_release": "alpha-1",
+  "pre_release_tag": "Alpha",
+  "pre_release_formatted": "-alpha.1"
 }
