@@ -13,6 +13,10 @@
     "discord_support": "no link yet",
     "key_link": "https://jnkie.com/get-key/agar-ware"
   },
+  "supported": {
+    "Arsenal": "111958650",
+    "The Chosen One": "3983828495"
+  },
 
   "owner_message": "nothing important is in here."
 }
