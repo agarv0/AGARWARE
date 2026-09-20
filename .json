@@ -18,6 +18,10 @@
     "Tung Tung Shooter": "127582934733",
     "The Chosen One": "3983828495"
   },
+  "key_system": {
+    "key": true,
+    "lasts": 24
+  },
 
   "owner_message": "nothing important is in here."
 }
