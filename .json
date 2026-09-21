@@ -4,9 +4,9 @@
     "minor": 0,
     "patch": 0,
     "update_count": 1,
-    "pre_release": "alpha-1",
+    "pre_release": "alpha-2",
     "pre_release_tag": "Alpha",
-    "pre_release_formatted": "-alpha.1"
+    "pre_release_formatted": "-alpha.2"
   },
   "links": {
     "discord_main": "https://discord.gg/cE2A9McBzH",
