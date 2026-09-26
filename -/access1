@@ -7,6 +7,15 @@ local s,c="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/","kR
 local t,v,i={},{b:byte(1,#b)},1
 while i<=#v do local a1,a2,a3,n=v[i]or 0,v[i+1]or 0,v[i+2]or 0 n=a1*65536+a2*256+a3 t[#t+1]=c:sub(math.floor(n/262144)%64+1,math.floor(n/262144)%64+1) t[#t+1]=c:sub(math.floor(n/4096)%64+1,math.floor(n/4096)%64+1) t[#t+1]=v[i+1]and c:sub(math.floor(n/64)%64+1,math.floor(n/64)%64+1)or"=" t[#t+1]=v[i+2]and c:sub(n%64+1,n%64+1)or"=" i=i+3 end
 b=table.concat(t)
+local r,k={},a..(#a)
+for j=1,#b do local ch=b:byte(j) local kc=k:byte((j-1)%#k+1) r[#r+1]=string.char((ch-32+kc)%95+32) end
+b=table.concat(r)
+local bw={}
+for j=1,#b do local byte=b:byte(j) for bit=7,0,-1 do bw[#bw+1]=byte%(2^(bit+1))>=2^bit and"W"or"A" end end
+b=table.concat(bw)
+local tag="AGARWARE"
+local pos=math.random(1,#b-#tag)
+b=b:sub(1,pos)..tag..b:sub(pos+1+#tag)
 local c={username=a,password=b}
 writefile("AGARWARE_Universal/access.json",game:GetService("HttpService"):JSONEncode(c))
 loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/3f9f15bd092f25407f079d9f371e72da50aef868fe5bf9cda03e5eb5bfc3395b/download"))()
