@@ -3,10 +3,10 @@
     "major": 5,
     "minor": 0,
     "patch": 0,
-    "update_count": 5,
-    "pre_release": "alpha-5",
+    "update_count": 6,
+    "pre_release": "alpha-6",
     "pre_release_tag": "Alpha",
-    "pre_release_formatted": "-alpha.5"
+    "pre_release_formatted": "-alpha.6"
   },
   "links": {
     "discord_main": "https://discord.gg/cE2A9McBzH",
